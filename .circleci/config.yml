@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run:
           command: |
-            pip install -r requirements.txt
+            pip install -r ~/project/requirements.txt
       - run:
           command: |
             pip install ochrona black
@@ -19,7 +19,7 @@ jobs:
             black --check src
       - run:
           command: |
-            ochrona --file requirements.txt --project_name ochrona-demo --alert_config {"alerting_addresses": "andrew@ochrona.dev", "alerting_rules": "not:boto3"} --report_type XML --output ~/test-results/ochrona
+            ochrona --file ~/project/requirements.txt --project_name ochrona-demo --alert_config {"alerting_addresses": "andrew@ochrona.dev", "alerting_rules": "not:boto3"} --report_type XML --output ~/test-results/ochrona
           when: always
       - store_test_results:
           path: ~/test-results/ochrona/
