@@ -1,0 +1,3 @@
+alert_config:
+  alerting_addresses: andrew@ochrona.dev
+  alerting_rules: not:boto3

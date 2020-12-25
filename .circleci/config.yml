@@ -22,7 +22,7 @@ jobs:
             mkdir ~/project/test-results/
       - run:
           command: |
-            ochrona --file ~/project/requirements.txt --project_name ochrona-demo --alert_config {"alerting_addresses": "andrew@ochrona.dev", "alerting_rules": "not:boto3"} --report_type XML --output ~/project/test-results/
+            ochrona --file ~/project/requirements.txt --project_name ochrona-demo --report_type XML --output ~/project/test-results/
           when: always
       - store_test_results:
           path: ~/project/test-results/
