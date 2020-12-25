@@ -19,10 +19,10 @@ jobs:
             black --check src
       - run:
           command: |
-            ochrona --file ~/project/requirements.txt --project_name ochrona-demo --alert_config {"alerting_addresses": "andrew@ochrona.dev", "alerting_rules": "not:boto3"} --report_type XML --output ~/test-results/ochrona
+            ochrona --file ~/project/requirements.txt --project_name ochrona-demo --alert_config {"alerting_addresses": "andrew@ochrona.dev", "alerting_rules": "not:boto3"} --report_type XML --output ~/test-results/
           when: always
       - store_test_results:
-          path: ~/test-results/ochrona/
+          path: test-results
 
 workflows:
   main:
