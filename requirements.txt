@@ -1,2 +1,4 @@
-requests==2.25.0
-fakefakefake==0.0.1
+requests==2.15.0
+click==7.1.2
+PyYAML==5.4.1
+urllib3==1.26.3
